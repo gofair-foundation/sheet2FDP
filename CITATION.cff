@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Burger"
+  given-names: "Kees"
+  orcid: ""
+- family-names: "Magagna"
+  given-names: "Barbara"
+  orcid: "https://orcid.org/0000-0003-2195-3997"
+- family-names: "Fouilloux"
+  given-names: "Anne"
+  orcid: "https://orcid.org/0000-0002-1784-2920"
+title: "sheet2FDP"
+version: 1.0.0
+url: "https://github.com/gofair-foundation/sheet2FDP"
