@@ -44,7 +44,8 @@ jobs:
           SHEET_GID: ${{secrets.SHEET_GID}}
         run: |
           conda activate sheet2fdp          
-          python ./src/convert.py
+          python ./src/sheet2xls.py
+          python ./src/convert.py  ${FILE_NAME}.tsv ${FILE_NAME}${SHEET_GID}.tsv
 
       - name: commit-artifacts
         env:
