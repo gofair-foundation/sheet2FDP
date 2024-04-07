@@ -33,8 +33,9 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git pull        
-          conda create -n sheet2fdp python=3.11 pandas openpyxl requests rdflib
+          conda create -n sheet2fdp python=3.11 pandas openpyxl requests
           conda activate sheet2fdp
+          conda install -c conda-forge rdflib
       - name: Fetch and Convert
         shell: bash -l {0}
         env:
