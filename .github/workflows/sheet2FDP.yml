@@ -1,0 +1,53 @@
+# This is a basic workflow to help you get started with Actions
+name: Sheet2FDP
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  sheet2fdp:
+    # The type of runner that the job will run on
+
+    name: Sheet2FDP
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-update-conda: true
+          python-version: "3.11"
+      - name: Prepare
+        shell: bash -l {0}
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git pull        
+          conda create -n sheet2fdp python=3.11 pandas openpyxl requests rdflib
+          conda activate sheet2fdp
+      - name: Fetch and Convert
+        shell: bash -l {0}
+        env:
+          FILE_NAME: ${{secrets.FILE_NAME}}
+          SHEET_ID: ${{secrets.SHEET_ID}}
+        run: |
+          conda activate sheet2fdp          
+          python ./src/convert.py
+
+      - name: commit-artifacts
+        env:
+          FILE_NAME: ${{secrets.FILE_NAME}}
+        run: |
+          git add .
+          git diff-index --quiet HEAD || git commit -m "new output generated from Google sheet has been generated"
+          git push
