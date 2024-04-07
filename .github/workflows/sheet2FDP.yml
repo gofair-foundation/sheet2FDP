@@ -40,6 +40,7 @@ jobs:
         env:
           FILE_NAME: ${{secrets.FILE_NAME}}
           SHEET_ID: ${{secrets.SHEET_ID}}
+          SHEET_GID: ${{secrets.SHEET_GID}}
         run: |
           conda activate sheet2fdp          
           python ./src/convert.py
@@ -47,7 +48,9 @@ jobs:
       - name: commit-artifacts
         env:
           FILE_NAME: ${{secrets.FILE_NAME}}
+          SHEET_GID: ${{secrets.SHEET_GID}}
         run: |
+          rm  ${FILE_NAME}.csv  ${FILE_NAME}${SHEET_GID}.csv
           git add .
           git diff-index --quiet HEAD || git commit -m "new output generated from Google sheet has been generated"
           git push
