@@ -1,0 +1,478 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix ex: <http://example.com/pact#> .
+@prefix pact: <http://purl.org/pact_funders/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:GrantShape a sh:NodeShape ;
+    sh:property [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:name "Partner Org Name" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 53 ;
+            sh:path pact:1196 ],
+        [ dash:editor dash:BooleanSelectEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:date ;
+            sh:maxCount 1 ;
+            sh:name "Grant End Month" ;
+            sh:order 22 ;
+            sh:path pact:1163 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1073 pact:1052 pact:1004 pact:1074 pact:1075 pact:1006 pact:1076 ) ;
+            sh:minCount 1 ;
+            sh:name "Ethnicity" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 25 ;
+            sh:path pact:1166 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:name "Grant Currency" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 11 ;
+            sh:path pact:1152 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in () ;
+            sh:minCount 1 ;
+            sh:name "Clinical Trial Phase" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 31 ;
+            sh:path pact:1172 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:int ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Research Subcat" ;
+            sh:order 61 ;
+            sh:path pact:1204 ],
+        [ dash:editor dash:BooleanSelectEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:date ;
+            sh:maxCount 1 ;
+            sh:name "Grant Start Month" ;
+            sh:order 19 ;
+            sh:path pact:1160 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:name "Abstract" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 15 ;
+            sh:path pact:1156 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:name "Partner Org RORID" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 54 ;
+            sh:path pact:1197 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:int ;
+            sh:maxCount 1 ;
+            sh:name "Grant Amount Converted" ;
+            sh:order 13 ;
+            sh:path pact:1154 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:int ;
+            sh:maxCount 1 ;
+            sh:name "Primary Research Cat" ;
+            sh:order 58 ;
+            sh:path pact:1201 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:name "Research Institution Subregion" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 51 ;
+            sh:path pact:1194 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:minCount 1 ;
+            sh:name "Grant Title Original" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path pact:1145 ],
+        [ dash:editor dash:BooleanSelectEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:date ;
+            sh:maxCount 1 ;
+            sh:name "DD, Grant Start Day" ;
+            sh:order 18 ;
+            sh:path pact:1159 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1051 pact:1047 pact:1048 pact:1004 pact:1052 pact:1046 pact:1049 pact:1005 pact:1050 pact:1006 ) ;
+            sh:minCount 1 ;
+            sh:name "Study Subject" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 24 ;
+            sh:path pact:1165 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1051 pact:1047 pact:1048 pact:1004 pact:1052 pact:1046 pact:1049 pact:1005 pact:1050 pact:1006 ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Research Institution Region" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 50 ;
+            sh:path pact:1193 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Funder Acronym" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 40 ;
+            sh:path pact:1181 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1051 pact:1047 pact:1048 pact:1004 pact:1052 pact:1046 pact:1049 pact:1005 pact:1050 pact:1006 ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Funder Region" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 42 ;
+            sh:path pact:1183 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in () ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Research Institution Country" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 49 ;
+            sh:path pact:1192 ],
+        [ dash:editor dash:BooleanSelectEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:date ;
+            sh:maxCount 1 ;
+            sh:name "Grant End Day" ;
+            sh:order 21 ;
+            sh:path pact:1162 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Funder Cross Ref ID" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 38 ;
+            sh:path pact:1179 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in () ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Grant Subregion" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 9 ;
+            sh:path pact:1150 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Investigator First Name" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 45 ;
+            sh:path pact:1187 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1052 pact:1112 pact:1109 pact:1111 pact:1117 pact:1114 pact:1113 pact:1108 pact:1116 pact:1107 pact:1115 pact:1110 ) ;
+            sh:minCount 1 ;
+            sh:name "Disease" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 33 ;
+            sh:path pact:1174 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:name "Research Cat" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 59 ;
+            sh:path pact:1202 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in () ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Funder Country" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 41 ;
+            sh:path pact:1182 ],
+        [ dash:editor dash:URIEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:maxCount 1 ;
+            sh:name "Research Institition RORID" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 48 ;
+            sh:path pact:1191 ],
+        [ dash:editor dash:BooleanSelectEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:boolean ;
+            sh:maxCount 1 ;
+            sh:name "Eu Pub Med Source" ;
+            sh:order 36 ;
+            sh:path pact:1177 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Funder ID" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 37 ;
+            sh:path pact:1178 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1128 pact:1133 pact:1135 pact:1119 pact:1137 pact:1125 pact:1131 ) ;
+            sh:minCount 1 ;
+            sh:name "Pathogen" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 32 ;
+            sh:path pact:1173 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:name "Grant Type" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 14 ;
+            sh:path pact:1155 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Funding Org Name" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 39 ;
+            sh:path pact:1180 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1006 pact:1016 pact:1004 pact:1018 pact:1017 pact:1005 ) ;
+            sh:minCount 1 ;
+            sh:name "Rurality" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 27 ;
+            sh:path pact:1168 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Grant Number" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path pact:1147 ],
+        [ dash:editor dash:BooleanSelectEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:date ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Grant End Year" ;
+            sh:order 23 ;
+            sh:path pact:1164 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:name "Special Tag" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 63 ;
+            sh:path pact:1206 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1026 pact:1021 pact:1020 pact:1004 pact:1025 pact:1023 pact:1029 pact:1028 pact:1006 pact:1027 pact:1022 pact:1030 pact:1031 pact:1005 pact:1024 ) ;
+            sh:minCount 1 ;
+            sh:name "Vulnerable Populations" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 28 ;
+            sh:path pact:1169 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:name "WHO Observatory Framework" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 34 ;
+            sh:path pact:1175 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:name "Partner Org ID" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 52 ;
+            sh:path pact:1195 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:int ;
+            sh:maxCount 1 ;
+            sh:name "Currency Exchange Rate USD" ;
+            sh:order 12 ;
+            sh:path pact:1153 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in () ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Funder Subregion" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 43 ;
+            sh:path pact:1184 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:name "Partner Org Region" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 56 ;
+            sh:path pact:1199 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:int ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Grant Amount Original" ;
+            sh:order 10 ;
+            sh:path pact:1151 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1043 pact:1039 pact:1034 pact:1004 pact:1033 pact:1042 pact:1038 pact:1037 pact:1041 pact:1040 pact:1044 pact:1005 pact:1036 pact:1035 pact:1006 ) ;
+            sh:minCount 1 ;
+            sh:name "Occupational Groups" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 29 ;
+            sh:path pact:1170 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Research Institition Name" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 47 ;
+            sh:path pact:1190 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:name "Grant Title Eng" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path pact:1146 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:int ;
+            sh:maxCount 1 ;
+            sh:name "Policy Roadmap" ;
+            sh:order 62 ;
+            sh:path pact:1205 ],
+        [ dash:editor dash:BooleanSelectEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:date ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Grant Start Year" ;
+            sh:order 20 ;
+            sh:path pact:1161 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:int ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Unique database reference number " ;
+            sh:order 3 ;
+            sh:path pact:1144 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in () ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Grant Country" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 8 ;
+            sh:path pact:1149 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:name "Key Word" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 35 ;
+            sh:path pact:1176 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:int ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Research Category ID" ;
+            sh:order 57 ;
+            sh:path pact:1200 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:name "Partner Org Country" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 55 ;
+            sh:path pact:1198 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:name "Investigator ORCID" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 44 ;
+            sh:path pact:1186 ],
+        [ dash:editor dash:BooleanSelectEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:boolean ;
+            sh:maxCount 1 ;
+            sh:name "ODA funding used" ;
+            sh:order 17 ;
+            sh:path pact:1158 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:int ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Grant ID" ;
+            sh:order 2 ;
+            sh:path pact:1143 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:name "Lay Summary" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 16 ;
+            sh:path pact:1157 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1059 pact:1060 pact:1061 pact:1052 pact:1055 pact:1071 pact:1056 pact:1069 pact:1066 pact:1062 pact:1063 pact:1065 pact:1070 pact:1006 pact:1057 pact:1058 pact:1064 pact:1005 pact:1054 pact:1067 pact:1068 ) ;
+            sh:minCount 1 ;
+            sh:name "Study Type" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 30 ;
+            sh:path pact:1171 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Investigator Last Name" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 46 ;
+            sh:path pact:1188 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1004 pact:1012 pact:1014 pact:1006 pact:1011 pact:1009 pact:1005 pact:1013 pact:1010 pact:1008 ) ;
+            sh:minCount 1 ;
+            sh:name "Age Groups" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 26 ;
+            sh:path pact:1167 ],
+        [ dash:editor dash:TextFieldEditor ;
+            dash:viewer dash:LiteralViewer ;
+            sh:datatype xsd:int ;
+            sh:maxCount 1 ;
+            sh:name "Primary Research Subcat" ;
+            sh:order 60 ;
+            sh:path pact:1203 ],
+        [ dash:editor dash:EnumSelectEditor ;
+            dash:viewer dash:LabelViewer ;
+            sh:in ( pact:1051 pact:1047 pact:1048 pact:1004 pact:1052 pact:1046 pact:1049 pact:1005 pact:1050 pact:1006 ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Grant Region" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 7 ;
+            sh:path pact:1148 ] ;
+    sh:targetClass ex:Grant .
+

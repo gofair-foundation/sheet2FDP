@@ -1,0 +1,62 @@
+Grant	http://purl.org/pact_funders/1143	GrantID	number		mandatory	1..1	This field serves as a unique identifier for each grant. It's important for every grant to have a distinct ID, making it a mandatory (1..1) field
+	http://purl.org/pact_funders/1144	Unique database reference number 	number		mandatory	1..1	Similar to the GrantID, this field serves as a unique identifier specific to the database. Just like the GrantID, it's crucial for data integrity, so it's also a mandatory (1..1) field
+	http://purl.org/pact_funders/1145	GrantTitleOriginal	text		mandatory	1..n	Each grant should have a title, but there might be cases where the original title is not available or relevant. Since it's a descriptive attribute, it's reasonable to make it mandatory (1..n) as titles should ideally be present, but there could be variations.
+	http://purl.org/pact_funders/1146	GrantTitleEng	text		optional	0..1	This field appears to be the English translation of the grant title, and it's also related to the grant type. However, English translations might not always be applicable, so it's better to consider this optional (0..1).
+	http://purl.org/pact_funders/1147	GrantNumber	text		mandatory	1..1	Similar to the GrantID and the unique database reference number, the grant number is essential for identification, making it mandatory (1..1).
+	http://purl.org/pact_funders/1148	GrantRegion	controlled list	region	mandatory	1..1	Since grants can be associated with a specific region, this can be considered mandatory (1..1) as it helps categorize and locate grants effectively.
+	http://purl.org/pact_funders/1149	GrantCountry	controlled list	country	mandatory	1..1	Similar to the grant region, the grant's country association is crucial, making it mandatory (1..1).
+	http://purl.org/pact_funders/1150	GrantSubregion	controlled list	subregion	mandatory	1..1	Similar to the region and country, the subregion can be considered mandatory (1..1) for accurate categorization.
+	http://purl.org/pact_funders/1151	GrantAmountOriginal	number		mandatory	1..1	The original grant amount is an important financial aspect, making it mandatory (1..1).
+	http://purl.org/pact_funders/1152	GrantCurrency	controlled list		optional	0..1	Currency is significant for interpreting grant amounts, but it might not always be applicable for certain grants. Therefore, it's better to make this optional (0..1).
+	http://purl.org/pact_funders/1153	CurrencyExchangeRateUSD	number		optional	0..1	This field might be applicable if the currency needs to be converted to USD, but it's not universally necessary. It's reasonable to make this optional (0..1).
+	http://purl.org/pact_funders/1154	GrantAmountConverted	number		optional	0..1	Similar to the currency exchange rate, converted amounts might not apply to all grants. This can be optional (0..1).
+	http://purl.org/pact_funders/1155	GrantType	controlled list	grant type	mandatory	1..n	Grant types might vary, and a grant can have multiple types. Hence, it's reasonable to consider this field as mandatory (1..n)
+	http://purl.org/pact_funders/1156	Abstract	text		optional	0..1	Abstracts provide a summary of the grant and might not always present. Therefore, it's better to make it optional (0..1).
+	http://purl.org/pact_funders/1157	LaySummary	text		optional	0..1	Lay summaries might not be applicable to all grants, so they can be optional (0..1).
+	http://purl.org/pact_funders/1158	ODA funding used	boolean		optional	0..1	This attribute indicates whether ODA funding was used, but it might not always apply. It can be optional (0..1).
+	http://purl.org/pact_funders/1159	DD, GrantStartDay	date		optional	0..1	Start dates are important for grants but might not always be available or irrelevant if the year is not captured. It's reasonable to make this optional (0..1).
+	http://purl.org/pact_funders/1160	GrantStartMonth	date		optional	0..1	Similar to the start day, the start month can be optional (0..1)
+	http://purl.org/pact_funders/1161	GrantStartYear	date		mandatory	1..1	Grant start year is important for periodical context of the grant, making it mandatory (1..1).
+	http://purl.org/pact_funders/1162	GrantEndDay	date		optional	0..1	Similar to the start day, the end day can be optional (0..1).
+	http://purl.org/pact_funders/1163	GrantEndMonth	date		optional	0..1	Similar to the end day, the end month can be optional (0..1).
+	http://purl.org/pact_funders/1164	GrantEndYear	date		mandatory	1..1	Grant end year is important for periodical context of the grant, making it mandatory (1..1).
+Study	http://purl.org/pact_funders/1165	StudySubject	controlled list	study subject	optional	1..n	The study subject can vary and a grant can be associated with multiple subjects, so it's reasonable to consider this optional (1..n).
+	http://purl.org/pact_funders/1166	Ethnicity	controlled list	ethnicity	optional	1..n	Similar to the study subject, ethnicity can vary and can be optional (1..n).
+	http://purl.org/pact_funders/1167	AgeGroups	controlled list	age group	optional	1..n	Age groups can vary, and a grant can involve multiple age groups, so it's reasonable to consider this optional (1..n)
+	http://purl.org/pact_funders/1168	Rurality	controlled list	rurality	optional	1..n	Rurality might not apply to all grants, so it can be optional (1..n).
+	http://purl.org/pact_funders/1169	VulnerablePopulations	controlled list	vulerable population	optional	1..n	Vulnerable populations might not apply to all grants, so it can be optional (1..n).
+	http://purl.org/pact_funders/1170	OccupationalGroups	controlled list	occupational group	optional	1..n	Similar to the vulnerable populations, occupational groups might not apply to all grants, so it can be optional (1..n).
+	http://purl.org/pact_funders/1171	StudyType	controlled list	study type	optional	1..n	Study types might vary, and a grant can have multiple types, so it's reasonable to consider this optional (1..n).
+	http://purl.org/pact_funders/1172	ClinicalTrialPhase	controlled list	clinical trial phase	optional	1..n	Clinical trial phases might not apply to all grants, so it can be optional (1..n).
+	http://purl.org/pact_funders/1173	Pathogen	controlled list	pathogen	optional	1..n	
+	http://purl.org/pact_funders/1174	Disease	controlled list	disease	optional	1..n	
+	http://purl.org/pact_funders/1175	WHO Observatory Framework	controlled list	WHO Observatory Framework	optional	1..n	
+	http://purl.org/pact_funders/1176	KeyWord	text		optional	0..1	
+	http://purl.org/pact_funders/1177	EuPubMedSource	boolean		optional	0..1	
+Funder	http://purl.org/pact_funders/1178	FunderID	text		mandatory	1..1	
+	http://purl.org/pact_funders/1179	FunderCrossRefID	text		mandatory	1..1	
+	http://purl.org/pact_funders/1180	FundingOrgName	text		mandatory	1..1	
+	http://purl.org/pact_funders/1181	FunderAcronym	text		mandatory	1..1	
+	http://purl.org/pact_funders/1182	FunderCountry	controlled list	country	mandatory	1..1	
+	http://purl.org/pact_funders/1183	FunderRegion	controlled list	region	mandatory	1..1	
+	http://purl.org/pact_funders/1184	FunderSubregion	controlled list	subregion	mandatory	1..1	
+Investigator	http://purl.org/pact_funders/1186	InvestigatorORCID	text		optional	0..1	
+	http://purl.org/pact_funders/1187	InvestigatorFirstName	text		mandatory	1..1	
+	http://purl.org/pact_funders/1188	InvestigatorLastName	text		mandatory	1..1	
+	http://purl.org/pact_funders/1190	ResearchInstititionName	text		mandatory	1..1	
+	http://purl.org/pact_funders/1191	ResearchInstititionRORID	URI		optional	0..1	
+	http://purl.org/pact_funders/1192	ResearchInstitutionCountry	controlled list	country	mandatory	1..1	
+	http://purl.org/pact_funders/1193	ResearchInstitutionRegion	controlled list	region	mandatory	1..1	
+	http://purl.org/pact_funders/1194	ResearchInstitutionSubregion	controlled list		mandatory	1..1	
+Partner Organisation	http://purl.org/pact_funders/1195	PartnerOrgID	text		optional	0..1	
+	http://purl.org/pact_funders/1196	PartnerOrgName	text		optional	0..1	
+	http://purl.org/pact_funders/1197	PartnerOrgRORID	text		optional	0..1	
+	http://purl.org/pact_funders/1198	PartnerOrgCountry	controlled list		mandatory	1..1	
+	http://purl.org/pact_funders/1199	PartnerOrgRegion	controlled list		mandatory	1..1	
+	http://purl.org/pact_funders/1200	ResearchCategoryID	number		mandatory	1..1	
+	http://purl.org/pact_funders/1201	PrimaryResearchCat	number		optional	0..1	
+	http://purl.org/pact_funders/1202	ResearchCat	controlled list		optional	0..1	
+	http://purl.org/pact_funders/1203	PrimaryResearchSubcat	number		optional	0..1	
+	http://purl.org/pact_funders/1204	ResearchSubcat	number		mandatory	1..1	
+	http://purl.org/pact_funders/1205	PolicyRoadmap	number		optional	0..1	
+	http://purl.org/pact_funders/1206	SpecialTag	text		optional	0..1	
